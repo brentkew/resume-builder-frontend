@@ -1,0 +1,62 @@
+
+# Dependencies
+node_modules/
+vendor/
+.venv/
+venv/
+__pycache__/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Build files
+dist/
+build/
+out/
+target/
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.bak
+
+# Test and coverage reports
+coverage/
+.nyc_output/
+
+# Cache
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+
+# Python
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Java
+*.class
+*.jar
+
+# Backup files
+*~
