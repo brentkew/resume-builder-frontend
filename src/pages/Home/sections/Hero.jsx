@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   CheckCircle2,
@@ -7,6 +8,8 @@ import {
   Sparkles,
   Target,
   WandSparkles,
+  ChevronDown,
+  ArrowDown
 } from "lucide-react";
 
 const Hero = () => {
@@ -22,8 +25,20 @@ const Hero = () => {
     "Strengthen your summary",
   ];
 
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollIndicator(window.scrollY < 250);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section className="relative isolate overflow-hidden bg-gradient-to-br from-[#F0F7FF] via-white to-[#ECFAFC] pb-16 pt-14 sm:pb-20 sm:pt-20 lg:pb-28 lg:pt-24">
+    <section id="hero-section" className="relative isolate overflow-hidden bg-gradient-to-br from-[#F0F7FF] via-white to-[#ECFAFC] pb-16 pt-14 sm:pb-20 sm:pt-20 lg:pb-28 lg:pt-24">
 
       {/* BACKGROUND DECORATIONS */}
       <div className="pointer-events-none absolute -right-40 top-0 -z-10 h-[500px] w-[500px] rounded-full bg-blue-100/50 blur-3xl" />
@@ -275,6 +290,48 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+
+      {/* FIXED SCROLL DOWN INDICATOR */}
+      <button
+        type="button"
+        aria-label="Scroll to next section"
+        onClick={() => {
+          const hero = document.getElementById("hero-section");
+          const nextSection = hero?.nextElementSibling;
+
+          if (nextSection) {
+            const navbarHeight =
+              document.querySelector("header")?.offsetHeight || 0;
+
+            const targetPosition =
+              nextSection.getBoundingClientRect().top +
+              window.scrollY -
+              navbarHeight;
+
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        }}
+        className={`group fixed bottom-5 left-1/2 z-40 flex -translate-x-1/2 flex-col items-center gap-2 transition-all duration-300 ${
+          showScrollIndicator
+            ? "translate-y-0 opacity-100"
+            : "pointer-events-none translate-y-4 opacity-0"
+        }`} >
+        <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-slate-500 transition-colors duration-300 group-hover:text-blue-600">
+          Scroll to explore
+        </span>
+
+        <span className="flex h-12 w-12 items-center justify-center rounded-full border border-white/40 bg-gradient-to-br from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-500/25 transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl group-hover:shadow-cyan-500/30">
+          <ArrowDown
+            size={20}
+            strokeWidth={2.2}
+            className="transition-transform duration-300 group-hover:translate-y-1"
+          />
+        </span>
+      </button>
     </section>
   );
 };

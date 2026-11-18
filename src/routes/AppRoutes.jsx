@@ -6,6 +6,7 @@ import MainLayout from "../components/layout/MainLayout";
 import Home from "../pages/Home/Home";
 import Templates from "../pages/Templates/Templates";
 import About from "../pages/About/About";
+import Features from "../pages/Features/Features";
 
 // const About = () => (
 //   <div className="p-20 text-center">About page coming soon.</div>
@@ -23,6 +24,8 @@ const AppRoutes = () => {
         <Route path="/templates" element={<Templates />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/features" element={<Features />} />
+
       </Route>
     </Routes>
   );
