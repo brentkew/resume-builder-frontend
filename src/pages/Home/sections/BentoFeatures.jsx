@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import {
   ArrowUpRight,
@@ -13,8 +12,8 @@ import {
 } from "lucide-react";
 
 const templates = [
-  { name: "Modern", accent: "bg-blue-600" },
-  { name: "Professional", accent: "bg-cyan-600" },
+  { name: "Modern", accent: "bg-blue-500" },
+  { name: "Professional", accent: "bg-violet-500" },
   { name: "Minimal", accent: "bg-slate-700" },
 ];
 
@@ -29,16 +28,17 @@ const BentoFeatures = () => {
   return (
     <section className="section bg-white">
       <div className="container">
+
         {/* Section heading */}
         <div className="section-header">
-          <span className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs font-bold text-blue-700">
+          <span className="inline-flex items-center gap-2 rounded-full border border-pink-100 bg-pink-50 px-3 py-1.5 text-xs font-bold text-pink-600">
             <Sparkles size={14} />
             POWERFUL RESUME TOOLS
           </span>
 
           <h2 className="section-title mt-5">
             Everything you need to
-            <span className="text-blue-600"> stand out.</span>
+            <span className="text-pink-600"> stand out.</span>
           </h2>
 
           <p className="section-description">
@@ -51,13 +51,14 @@ const BentoFeatures = () => {
         <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
 
           {/* AI Resume Builder */}
-          <article className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-[#F8FAFC] p-5 text-slate-900 transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg hover:shadow-slate-200/60 sm:p-7 md:col-span-7">
+          <article className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-pink-50/60 p-5 text-slate-900 transition duration-300 hover:-translate-y-1 hover:border-pink-200 hover:shadow-lg hover:shadow-pink-100/60 sm:p-7 md:col-span-7">
+
             <div className="flex items-center justify-between">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-blue-100 bg-blue-50 text-blue-700">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-pink-100 bg-pink-50 text-pink-600 transition group-hover:scale-110">
                 <Sparkles size={21} />
               </div>
 
-              <span className="rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-[10px] font-semibold tracking-wide text-blue-700">
+              <span className="rounded-full border border-pink-100 bg-pink-50 px-3 py-1 text-[10px] font-semibold tracking-wide text-pink-600">
                 AI POWERED
               </span>
             </div>
@@ -73,7 +74,7 @@ const BentoFeatures = () => {
 
             <Link
               to="/resume-builder"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-700 transition-all hover:gap-3 hover:text-blue-800"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-pink-600 transition-all hover:gap-3 hover:text-pink-700"
             >
               Build your resume
               <ArrowUpRight size={17} />
@@ -81,15 +82,16 @@ const BentoFeatures = () => {
 
             {/* Resume editor preview */}
             <div className="mt-7 rounded-xl border border-slate-200 bg-white p-3.5 shadow-sm sm:p-4">
+
               <div className="flex items-center justify-between border-b border-slate-200 pb-3">
                 <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-blue-600" />
+                  <span className="h-2 w-2 rounded-full bg-pink-500" />
                   <span className="text-[11px] font-medium text-slate-600">
                     Resume preview
                   </span>
                 </div>
 
-                <span className="rounded-md bg-blue-50 px-2 py-1 text-[9px] font-medium text-blue-700">
+                <span className="rounded-md bg-pink-50 px-2 py-1 text-[9px] font-medium text-pink-600">
                   LIVE EDITOR
                 </span>
               </div>
@@ -100,7 +102,7 @@ const BentoFeatures = () => {
                   <div className="mt-2 h-1.5 w-24 rounded bg-slate-300" />
 
                   <div className="mt-3 flex flex-wrap gap-2">
-                    <span className="rounded bg-blue-50 px-2 py-1 text-[9px] font-medium text-blue-700">
+                    <span className="rounded bg-pink-50 px-2 py-1 text-[9px] font-medium text-pink-600">
                       Product Designer
                     </span>
 
@@ -110,8 +112,8 @@ const BentoFeatures = () => {
                   </div>
                 </div>
 
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-blue-100 bg-blue-50">
-                  <FileText size={20} className="text-blue-600" />
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-pink-100 bg-pink-50">
+                  <FileText size={20} className="text-pink-600" />
                 </div>
               </div>
 
@@ -132,7 +134,7 @@ const BentoFeatures = () => {
                     {item.lines.map((width, index) => (
                       <div
                         key={index}
-                        className={`mt-2 h-1 rounded-full bg-blue-400 ${width}`}
+                        className={`mt-2 h-1 rounded-full bg-pink-300 ${width}`}
                       />
                     ))}
                   </div>
@@ -144,7 +146,7 @@ const BentoFeatures = () => {
                   Clean structure · Professional layout
                 </span>
 
-                <span className="flex items-center gap-1 text-[10px] font-medium text-blue-700">
+                <span className="flex items-center gap-1 text-[10px] font-medium text-pink-600">
                   <CheckCircle2 size={12} />
                   Ready to edit
                 </span>
@@ -153,13 +155,14 @@ const BentoFeatures = () => {
           </article>
 
           {/* ATS Checker */}
-          <article className="group relative overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-[#F0F6FF] via-white to-[#F8FBFF] p-5 transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg hover:shadow-blue-100/60 sm:p-7 md:col-span-5">
+          <article className="group relative overflow-hidden rounded-2xl border border-violet-100 bg-gradient-to-br from-violet-50/70 via-white to-white p-5 transition duration-300 hover:-translate-y-1 hover:border-violet-200 hover:shadow-lg hover:shadow-violet-100/60 sm:p-7 md:col-span-5">
+
             <div className="flex items-center justify-between">
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white shadow-md shadow-blue-200">
+              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-600 text-white shadow-md shadow-violet-200 transition group-hover:scale-110">
                 <Target size={21} />
               </div>
 
-              <span className="rounded-full border border-blue-100 bg-white px-3 py-1 text-[10px] font-semibold text-blue-700">
+              <span className="rounded-full border border-violet-100 bg-white px-3 py-1 text-[10px] font-semibold text-violet-600">
                 ATS ANALYSIS
               </span>
             </div>
@@ -189,13 +192,13 @@ const BentoFeatures = () => {
                   </span>
                 </div>
 
-                <p className="mt-1 text-[11px] font-medium text-blue-700">
+                <p className="mt-1 text-[11px] font-medium text-violet-600">
                   Example analysis score
                 </p>
               </div>
 
-              <div className="flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-full border-[6px] border-blue-100 border-t-blue-600">
-                <span className="text-lg font-bold text-blue-700">84%</span>
+              <div className="flex h-[68px] w-[68px] shrink-0 items-center justify-center rounded-full border-[6px] border-violet-100 border-t-violet-600">
+                <span className="text-lg font-bold text-violet-700">84%</span>
               </div>
             </div>
 
@@ -216,7 +219,7 @@ const BentoFeatures = () => {
 
                   <div className="mt-2 h-1 overflow-hidden rounded-full bg-slate-100">
                     <div
-                      className="h-full rounded-full bg-blue-600"
+                      className="h-full rounded-full bg-violet-500"
                       style={{ width: `${metric.score}%` }}
                     />
                   </div>
@@ -226,7 +229,7 @@ const BentoFeatures = () => {
 
             <Link
               to="/ats-checker"
-              className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-blue-700 transition hover:gap-3"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-violet-600 transition hover:gap-3 hover:text-violet-700"
             >
               Analyze your resume
               <ArrowUpRight size={17} />
@@ -239,8 +242,9 @@ const BentoFeatures = () => {
           </article>
 
           {/* Professional Templates */}
-          <article className="group relative overflow-hidden mt-3 rounded-2xl border border-blue-100 bg-gradient-to-br from-white to-blue-50/70 p-5 transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg hover:shadow-blue-100/50 sm:p-6 md:col-span-5">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 text-blue-700">
+          <article className="group relative overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-white to-blue-50/70 p-5 transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg hover:shadow-blue-100/50 sm:p-6 md:col-span-5">
+
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 text-blue-600 transition group-hover:scale-110">
               <LayoutTemplate size={20} />
             </div>
 
@@ -265,6 +269,7 @@ const BentoFeatures = () => {
                   <div className="mt-3 h-1 w-full rounded bg-slate-200" />
                   <div className="mt-2 h-1 w-4/5 rounded bg-slate-200" />
                   <div className="mt-3 h-1 w-2/3 rounded bg-slate-300" />
+
                   <p className="mt-3 truncate text-[8px] font-medium text-slate-400">
                     {template.name}
                   </p>
@@ -274,7 +279,7 @@ const BentoFeatures = () => {
 
             <Link
               to="/templates"
-              className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-blue-700 transition hover:gap-3"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-blue-600 transition hover:gap-3 hover:text-blue-700"
             >
               Explore templates
               <ArrowUpRight size={17} />
@@ -282,8 +287,9 @@ const BentoFeatures = () => {
           </article>
 
           {/* AI Writing Assistance */}
-          <article className="group relative overflow-hidden mt-3 rounded-2xl border border-blue-100 bg-gradient-to-br from-white via-white to-cyan-50/70 p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-200 hover:shadow-lg hover:shadow-cyan-100/40 sm:p-6 md:col-span-4">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-100 text-cyan-700">
+          <article className="group relative overflow-hidden rounded-2xl border border-rose-100 bg-gradient-to-br from-white via-white to-rose-50/70 p-5 transition duration-300 hover:-translate-y-1 hover:border-rose-200 hover:shadow-lg hover:shadow-rose-100/50 sm:p-6 md:col-span-4">
+
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-rose-100 text-rose-600 transition group-hover:scale-110">
               <WandSparkles size={20} />
             </div>
 
@@ -296,7 +302,7 @@ const BentoFeatures = () => {
               and easier for recruiters to understand.
             </p>
 
-            <div className="mt-5 space-y-3 rounded-xl border border-cyan-100 bg-white p-3.5 shadow-sm">
+            <div className="mt-5 space-y-3 rounded-xl border border-rose-100 bg-white p-3.5 shadow-sm">
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
                   Original wording
@@ -308,17 +314,17 @@ const BentoFeatures = () => {
               </div>
 
               <div>
-                <p className="text-[10px] font-bold uppercase tracking-wider text-cyan-700">
+                <p className="text-[10px] font-bold uppercase tracking-wider text-rose-600">
                   Improved example
                 </p>
 
-                <p className="mt-2 rounded-lg border border-cyan-100 bg-cyan-50/70 p-2.5 text-[11px] font-medium leading-5 text-slate-700">
+                <p className="mt-2 rounded-lg border border-rose-100 bg-rose-50/70 p-2.5 text-[11px] font-medium leading-5 text-slate-700">
                   Coordinated social media campaigns and supported
                   digital marketing initiatives.
                 </p>
               </div>
 
-              <div className="flex items-center gap-2 pt-1 text-[10px] font-semibold text-cyan-700">
+              <div className="flex items-center gap-2 pt-1 text-[10px] font-semibold text-rose-600">
                 <Sparkles size={13} />
                 Clearer wording. Stronger presentation.
               </div>
@@ -326,8 +332,9 @@ const BentoFeatures = () => {
           </article>
 
           {/* Easy Export */}
-          <article className="group relative overflow-hidden mt-3 rounded-2xl border border-blue-100 bg-gradient-to-br from-white to-slate-50 p-5 transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg hover:shadow-blue-100/40 sm:p-6 md:col-span-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100 text-blue-700">
+          <article className="group relative overflow-hidden rounded-2xl border border-emerald-100 bg-gradient-to-br from-white to-emerald-50/60 p-5 transition duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-lg hover:shadow-emerald-100/50 sm:p-6 md:col-span-3">
+
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600 transition group-hover:scale-110">
               <Download size={20} />
             </div>
 
@@ -342,7 +349,7 @@ const BentoFeatures = () => {
 
             <div className="mt-5 rounded-xl border border-slate-200 bg-white p-3.5 shadow-sm">
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600">
                   <FileText size={21} />
                 </div>
 
@@ -355,11 +362,11 @@ const BentoFeatures = () => {
                   </p>
                 </div>
 
-                <CheckCircle2 size={17} className="shrink-0 text-blue-600" />
+                <CheckCircle2 size={17} className="shrink-0 text-emerald-600" />
               </div>
 
-              <div className="mt-4 rounded-lg bg-blue-50 px-3 py-2.5">
-                <div className="flex items-center gap-2 text-blue-700">
+              <div className="mt-4 rounded-lg bg-emerald-50 px-3 py-2.5">
+                <div className="flex items-center gap-2 text-emerald-700">
                   <FileDown size={15} />
                   <span className="text-[10px] font-bold">
                     Ready for sharing
@@ -369,7 +376,7 @@ const BentoFeatures = () => {
 
               <div className="mt-3 flex items-center justify-between gap-2 text-[10px] text-slate-400">
                 <span>Professional format</span>
-                <span className="flex items-center gap-1 font-semibold text-blue-600">
+                <span className="flex items-center gap-1 font-semibold text-emerald-600">
                   <CheckCircle2 size={12} />
                   Preview
                 </span>

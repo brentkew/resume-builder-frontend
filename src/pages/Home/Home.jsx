@@ -13,6 +13,7 @@ import CustomizationShowcase from "./sections/CustomizationShowcase";
 import SmartFeaturesGrid from "./sections/SmartFeaturesGrid";
 import RearrangeSectionsShowcase from "./sections/RearrangeSectionsShowcase";
 import ATSCheckerShowcase from "./sections/ATSCheckerShowcase";
+import LayoutCustomization from "./sections/layoutCustomization";
 
 const Home = () => {
   return (
@@ -20,12 +21,13 @@ const Home = () => {
       <Hero />
       <TrustSection />
       <BentoFeatures />
-      <TemplateGallery />
+      {/* <TemplateGallery /> */}
       
       <ATSCheckerShowcase />
       <RearrangeSectionsShowcase />
+      <LayoutCustomization />
 
-      <SmartFeaturesGrid />
+      {/* <SmartFeaturesGrid /> */}
       {/* <CustomizationShowcase /> */}
 
       
